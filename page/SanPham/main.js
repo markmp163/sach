@@ -15,7 +15,7 @@ listBooks.forEach((x) => {
          <p class="title1">${x.title}</p>
          <p class="title1">Giá: ${x.cost}</p>
          <div style="display: flex; justify-content: center;">
-           <button type="button" class="btn__item btn__buy" onclick ='{handlerClickHatHang(${JSON.stringify(x)})}'><a href="../GioHang/index.html">Mua ngay</a></button>
+           <button type="button" class="btn__item btn__buy" onclick ='{handlerClickHatHang(${JSON.stringify(x)})}'><a href="../GioHang/index.html" style="width: 100%; height: 100%">Mua ngay</a></button>
          </div>
        </div>
      </li>
