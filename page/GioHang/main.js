@@ -9,7 +9,7 @@ let allPrice = 0
 listCard.forEach(item => {
   defaultPrice += item.cost
   htmls += `
-  <div class="cart-row cart-info">
+  <div class="cart-row cart-info" id=${item.id}>
     <div class="cart-item cart-column">
       <img class="cart-item-image"
         src="${item.linkImg}"
@@ -36,6 +36,20 @@ for (var i = 0; i < remove_cart.length; i++) {
   button.addEventListener("click", function () {
     var button_remove = event.target;
     button_remove.parentElement.parentElement.remove();
+    let getId = event.path[2].attributes[1].value;
+    let newListCart = listCard.filter(o => 
+      o.id != getId
+    )
+    console.log(newListCart)
+    localStorage.setItem('users', JSON.stringify([
+      ...listCardMemory,
+      listCardMemory[isLogin].listCard= newListCart,
+      // ...listCardMemory,
+      // isLogin:[
+      //   ...listCard,
+
+      // ],
+    ]))
     updatecart();
   });
 }
