@@ -10,7 +10,7 @@ let allPrice = 0
 listCard.forEach(item => {
   defaultPrice += item.cost
   htmls += `
-  <div class="cart-row cart-info">
+  <div class="cart-row cart-info" id=${item.id}>
     <div class="cart-item cart-column">
       <img class="cart-item-image"
         src="${item.linkImg}"
@@ -37,6 +37,20 @@ for (var i = 0; i < remove_cart.length; i++) {
   button.addEventListener("click", function () {
     var button_remove = event.target;
     button_remove.parentElement.parentElement.remove();
+    let getId = event.path[2].attributes[1].value;
+    let newListCart = listCard.filter(o => 
+      o.id != getId
+    )
+    console.log(newListCart)
+    localStorage.setItem('users', JSON.stringify([
+      ...listCardMemory,
+      listCardMemory[isLogin].listCard= newListCart,
+      // ...listCardMemory,
+      // isLogin:[
+      //   ...listCard,
+
+      // ],
+    ]))
     updatecart();
   });
 }
@@ -97,12 +111,12 @@ document.getElementById('btn_lg').onclick = () => {
   //   })
   // })
 
-  for(let k = 0; k < cart111.length; k++){
-    let cart__title = cart111[k].getElementByTagName('span')[0].innerHTML
-    let cart__cost = cart111[k].getElementByTagName('span')[1].innerHTML
-    invoice.push({
-      name: cart__title,
-      cost: cart__cost,
-    })
-  }
-  console.log(invoice);
+  // for(let k = 0; k < cart111.length; k++){
+  //   let cart__title = cart111[k].getElementByTagName('span')[0].innerHTML
+  //   let cart__cost = cart111[k].getElementByTagName('span')[1].innerHTML
+  //   invoice.push({
+  //     name: cart__title,
+  //     cost: cart__cost,
+  //   })
+  // }
+  // console.log(invoice);

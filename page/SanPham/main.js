@@ -8,7 +8,10 @@ listBooks.forEach((x) => {
   lists += `
      <li style="text-align: center;">
        <div style="padding: 10px; max-width: 200px">
-         <img src="${x.linkImg}" alt="this is image of cai om dieu ki" style="width: 150px">
+       <a href="../CuaHang/index.html">
+          <img src="${x.linkImg}" alt="this is image of cai om dieu ki" 
+            class="img-fluid" onclick ='{handlerClickProduct(${JSON.stringify(x)})}' />
+        </a>
          <p class="title1">${x.title}</p>
          <p class="title1">Giá: ${x.cost}</p>
          <div style="display: flex; justify-content: center;">
@@ -20,12 +23,3 @@ listBooks.forEach((x) => {
 });
 
 listBook.innerHTML = lists;
-
-//
-// var btn_click = document.getElementsByClassName("btn__buy");
-// for (var i = 0; i < btn_click.length; i++) {
-// 	var button = btn_click[i];
-// 	button.addEventListener("click", function (e) {
-// 		console.log(e.target.parentElement.parentElement.getElementsByClassName('title1')[0].innerHTML);
-// 	});
-// }

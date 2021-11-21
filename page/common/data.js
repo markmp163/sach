@@ -4,36 +4,48 @@ export const listBooks = [
     linkImg: "../../assets/image/5cm.png",
     title: "5 cm trên giấy",
     cost: 49000,
+    athor: 'Nguyễn Thạch Long',
+    publishingCompany: 'Kim Đồng'
   },
   {
     id: 2,
     linkImg: "../../assets/image/thoau.png",
     title: "Từ bến sống Nhùng",
     cost: 85000,
+    athor: 'Nguyễn Thạch Luân',
+    publishingCompany: 'Kim Đồng'
   },
   {
     id: 3,
     linkImg: "../../assets/image/vonhat.png",
     title: "Hoàng tử bé",
     cost: 85000,
+    athor: 'Nguyễn Đức Long',
+    publishingCompany: 'Hội Nhà Văn'
   },
   {
     id: 4,
     linkImg: "../../assets/image/chipheo.png",
     title: "Kẻ trộm sách",
     cost: 85000,
+    athor: 'Nguyễn Thạch Luân',
+    publishingCompany: 'Kim Đồng',
   },
   {
     id: 5,
     linkImg: "../../assets/image/caiomdieuky.png",
     title: "Cuộc đời của Pi",
     cost: 57000,
+    athor: 'Nguyễn Thạch Luân',
+    publishingCompany: 'Hội Nhà Văn',
   },
   {
     id: 6,
     linkImg: "../../assets/image/khonkho.png",
     title: "Những người khốn khổ",
     cost: 57000,
+    athor: 'Nguyễn Thạch Luân',
+    publishingCompany: 'Hội Nhà Văn',
   },
 ];
 
