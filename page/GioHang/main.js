@@ -1,7 +1,6 @@
 const listCardMemory = JSON.parse(localStorage.getItem('users'))
 const isLogin = JSON.parse(localStorage.getItem('isLogin'))
 const listCard = listCardMemory[isLogin].listCard
-console.log(listCard);
 
 let htmls = ''
 let defaultPrice = 0
@@ -27,7 +26,7 @@ listCard.forEach(item => {
 })
 document.getElementById('cart-items').innerHTML = htmls
 
-if(!document.getElementById('price-defaut').innerHTML){
+if (!document.getElementById('price-defaut').innerHTML) {
   document.getElementById('price-defaut').innerHTML = defaultPrice
 }
 
@@ -55,7 +54,6 @@ function updatecart() {
     var price = parseFloat(price_item.innerText); // chuyển một chuổi string sang number để tính tổng tiền.
     var quantity = quantity_item.value; // lấy giá trị trong thẻ input
     total = total + price * quantity;
-    
   }
   document.getElementsByClassName("cart-total-price")[0].innerText =
     total;
@@ -84,25 +82,33 @@ document.getElementById('tamTinh').innerHTML = allPrice + ' VND'
 document.getElementById('tongCong').innerHTML = allPrice + 30000 + ' VND'
 
 document.getElementById('btn_lg').onclick = () => {
-  
-}
-  let cart111 = document.getElementsByClassName('cart-info')
-  let invoice = []
-  // document.getElementsByClassName('cart-info').forEach(cart => {
-  //   let cart__title = cart.getElementByTagName('span')[0]
-  //   let cart__cost = cart.getElementByTagName('span')[1]
-  //   invoice.push({
-  //     name: cart__title,
-  //     cost: cart__cost,
-  //   })
-  // })
-
-  for(let k = 0; k < cart111.length; k++){
-    let cart__title = cart111[k].getElementByTagName('span')[0].innerHTML
-    let cart__cost = cart111[k].getElementByTagName('span')[1].innerHTML
-    invoice.push({
-      name: cart__title,
-      cost: cart__cost,
+  let hoaDon = []
+  let cart__length = listCard.length
+  for (let k = 0; k < cart__length; k++) {
+    let cart__info = document.getElementsByClassName('cart-info')[k]
+    let cart__title = cart__info.getElementsByTagName('span')[0].innerHTML
+    let cart__cost = cart__info.getElementsByTagName('span')[1].innerHTML
+    let cart__quality = cart__info.getElementsByTagName('input')[0].value
+    hoaDon.push({
+      cart__title,
+      cart__cost,
+      cart__quality,
     })
   }
-  console.log(invoice);
+
+  let tongCong = parseInt(document.getElementById('tongCong').innerHTML)
+  let tongTien = {
+    tamTinh: document.getElementById('tamTinh').innerHTML,
+    tongCong,
+  }
+
+  let thanhToan = {
+    hoaDon,
+    tongCong
+  }
+
+  localStorage.setItem('thanhToan', JSON.stringify(thanhToan))
+}
+
+
+
