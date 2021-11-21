@@ -1,0 +1,241 @@
+.qc {
+  display: flex;
+  justify-content: center;
+}
+
+.qc > div {
+  padding: 10px;
+}
+
+.qc > div > img{
+  width: auto;
+}
+
+.title1 {
+font-family: Roboto;
+font-size: 24px;
+color: #0E8D41;
+margin: 0px !important;
+text-decoration: none;
+}
+
+.title2 {
+  color: #0E8D41;
+  font-weight: bold;
+  font-size: 48px !important;
+}
+
+.bestSale {
+  margin-top: 24px;
+  text-align: center;
+}
+.bestSale .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #207335;
+}
+.bestSale img {
+  height: 1px;
+}
+.bestSale p {
+  text-align: center;
+  color: #207335;
+  margin: 0px;
+  margin-bottom: 23px;
+}
+
+.title img {
+  width: 50%;
+}
+
+.title p {
+  margin: 0px;
+  margin-left: 24px;
+  margin-right: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.styleList {
+  padding: 0px;
+  width: 100%;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.styleList li {
+  list-style: none;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+
+.styleList li img {
+  width: 225px;
+  height: 261px;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.styleList li .title__Book {
+  color: #000000;
+  font-size: 23px;
+}
+.styleList li .cost {
+  color: #f40a3a;
+  font-size: 23px;
+}
+
+.btn__item {
+  width: 100%;
+  border: none;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  height: 48px;
+  cursor: pointer;
+  background-color: #0E8D41;
+}
+
+.list__menu {
+  width: 100%;
+}
+
+.bestSale > button {
+  width: 170px;
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid #35559f;
+  height: 53px;
+  cursor: pointer;
+  font-size: 21px;
+  color: #207335;
+}
+
+/* style tin tức nổi bật */
+.titleNew {
+  width: 321px;
+  height: 41px;
+  background-color: #2f8b46;
+  color: white;
+  font-size: 27px;
+  text-align: center;
+  margin-left: 60px;
+}
+
+/* responsive */
+@media screen and (max-width: 1215px) {
+  .styleList li img {
+    width: 90%;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 231px;
+  }
+
+  .styleList li .title__Book {
+    color: #000000;
+    font-size: 18px;
+  }
+  .styleList li .cost {
+    color: #f40a3a;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  .list__menu li {
+    width: 100px;
+    font-size: 16px;
+  }
+  .menu .danhmuc {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .styleList {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  header {
+    height: 140px;
+  }
+
+  .titleNew {
+    width: 270px;
+    height: 25px;
+    background-color: #2f8b46;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 30px;
+  }
+
+  .search__input input {
+    width: 150px;
+  }
+  .search__input {
+    width: 200px;
+    height: 40px;
+  }
+  .style--button {
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 55px;
+    height: 40px;
+  }
+  .search__input span {
+    width: 70px;
+  }
+
+  .search__input span {
+    line-height: 40px;
+  }
+
+  .style--mr {
+    margin-right: 20px;
+  }
+
+  .line {
+    display: none;
+  }
+  .styleList li {
+    margin-top: 10px;
+  }
+  .styleSlider > img {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .list__menu li {
+    width: 50px;
+  }
+  .item__card {
+    display: none;
+  }
+  .styleSlider > img {
+    width: 80px;
+  }
+  .styleSlider > p {
+    font-size: 13px;
+  }
+  .cpr {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .style--button {
+    font-size: 14px;
+  }
+  .menu .danhmuc {
+    display: none;
+  }
+}

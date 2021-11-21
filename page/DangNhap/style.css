@@ -1,0 +1,79 @@
+form{
+    margin-bottom: 50px;
+}
+
+input{
+    width: 834px;
+    height: 64px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login{
+    margin: auto;
+    width: 834px;
+    max-width: 80%;
+}
+
+input{
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+
+}
+
+label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+button{
+    width: 180,83px;
+    height: 71px;
+    background-color: #0E8D41;
+    margin-bottom: 200px;
+}
+
+button a{
+    font-size: 35px;
+    text-decoration: none;
+    padding: 0 10px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 41px;
+}
+
+.validate--text{
+    color: red;
+    font-size: 30px;
+}
+
+.validate{
+    border-bottom: red 4px solid;
+}
+
+@media screen and (max-width: 800px){
+    label{
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    button a{
+        font-size: 20px;
+    }
+    .validate--text{
+        font-size: 20px;
+    }
+    input{
+        height: 45px;
+    }
+}

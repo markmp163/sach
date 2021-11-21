@@ -1,0 +1,132 @@
+form{
+    margin-bottom: 50px;
+}
+
+input{
+    width: 834px;
+    height: 64px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.resgiter{
+    margin: auto;
+    width: 834px;
+    max-width: 80%;
+}
+
+input{
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    flex: 3;
+}
+
+label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.input-text{
+    flex: 1;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 30px;
+    color: #1FF60C;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    line-height: 45px;
+    margin-top: 18.5px;
+    margin-left: 0px;
+    /* position: relative;
+    left: 640px;
+    top: -50px; */
+}
+
+.number-input{
+    display: flex;
+}
+.button-center{
+   margin-left: calc(50% - 98.305px);
+}
+button{
+    width: 196.61px;
+    height: 71px;
+    background-color: #0E8D41;
+    color: #FFFFFF;
+    font-size: 35px !important;
+    padding: 0 30px;
+    text-decoration: none;
+}
+
+.text-validate{
+    color: red;
+    font-size: 25px;
+}
+
+.validate{
+    box-shadow: 0px 4px 0px red;
+}
+
+@media screen and (max-width: 791px){
+    #get-otp{
+        font-size: 20px;
+        line-height: 31px;
+    }
+    .input-text{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    label{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 38px !important;
+    }
+    .text-validate{
+        font-size: 18px;
+    }
+    input{
+        height: 50px;
+    }
+    button{
+        font-size: 25px !important;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 534px){
+    #get-otp{
+        /* margin-top: -71px; */
+        font-size: 15px;
+    }
+    .input-text{
+        font-size: 15px;
+
+    }
+    label{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 23px !important;
+    }
+    .text-validate{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 399px){
+    #get-otp{
+        flex: 1.5;
+    }
+}
+
+@media screen and (max-width: 327px){
+    #get-otp{
+        line-height: 16px;
+    }
+}
